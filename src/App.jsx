@@ -1,40 +1,25 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from 'react-router-dom'
-
-/**
- * Importing other components
- */
-import Home from './components/Home'
-import About from './components/About'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Quizzes from './components/Quizzes';
+import Question from './components/Question';
+import Edit from './components/Edit';
+import Create from './components/Create'
 
 const App = () => {
+
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL.
-            Furthermore, notice how the content above always renders? On each page? */}
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/quizzes" element={<Quizzes />} />
+          <Route path="/question/:id" element={<Question />} />
+          <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/create" element={<Create />} />
         </Routes>
       </div>
     </Router>
   );
 }
 
-export default App
+export default App;
