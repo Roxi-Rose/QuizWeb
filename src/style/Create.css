@@ -1,0 +1,57 @@
+.parent-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.addForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 400px;
+    background-color: #0000009c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    margin-top: 5px;
+    margin-left: 200px;
+    padding: 100px;
+}
+
+body {
+    background: url('https://i.pinimg.com/564x/e7/e7/da/e7e7da4d685d704b4bfa067cbc9bce15.jpg') no-repeat;
+    background-size: cover;
+}
+
+.form {
+    width: 500px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form input {
+    width: calc(50% - 10px);
+    /* Each input takes up 50% of the width with a margin of 10px between them */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 160px;
+    height: 30px;
+}
+
+
+/* Clearfix to ensure proper wrapping of input fields */
+
+.form::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form button {
+    height: 30px;
+    width: 120px;
+    border-radius: 10px;
+    cursor: pointer;
+}

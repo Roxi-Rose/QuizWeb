@@ -1,0 +1,115 @@
+.home {
+    display: grid;
+    height: 100vh;
+    background: url('https://i.pinimg.com/564x/e7/e7/da/e7e7da4d685d704b4bfa067cbc9bce15.jpg') no-repeat;
+    background-size: cover;
+}
+
+.topics {
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    background: url('https://i.pinimg.com/564x/e7/e7/da/e7e7da4d685d704b4bfa067cbc9bce15.jpg') no-repeat;
+    background-size: cover;
+}
+
+.user-profile {
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.mainPage {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: transparent;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.nav button {
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fffdfd;
+    font-size: 20px;
+    background-color: #000000;
+}
+
+.topics-content {
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: 90%;
+    bottom: 480px;
+    border-radius: 12px;
+    border-radius: 300px;
+    border: 3.5px solid #ae0505;
+    box-shadow: 1px 0px 10px rgb(255, 0, 0);
+}
+
+.topics-content button {
+    background-color: #ff0000;
+    margin: 0 40px;
+    border-radius: 10px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.top h2 {
+    flex: 1;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-right: 30%;
+}
+
+.top button {
+    margin-right: 20%;
+    font-size: larger;
+    color: black;
+    background-color: #ae0505;
+    border: 1.5px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(255, 0, 0);
+}
+
+.top button:hover {
+    color: aliceblue;
+    background-color: #000000;
+}
+
+.form {
+    display: flex;
+    width: 300px;
+    padding: 40px;
+    background-color: #000000;
+    border-radius: 50px;
+    color: #ff0000;
+}
+
+.quiz-button {
+    height: 20vh;
+    width: 20vw;
+}
