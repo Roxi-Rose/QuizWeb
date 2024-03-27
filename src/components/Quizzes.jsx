@@ -5,30 +5,36 @@ import Footer from './Footer';
 import '../style/Home.css';
 // import userImage from '../images/user.png';
 
-function Quizzes() {
+function Quizzes({ quizData }) {
+
+  const navigate = useNavigate();
+
+  const handleClickModify = (id) => {
+    navigate(`/edit/${id}`);
+  };
+
+  const handleClickDelete = (id) => {
+    // Add your delete logic here
+  };
+
+  const handleClickTopic = (id) => {
+    navigate(`/question/${id}`);
+  };
 
   return (
     <div className="topics">
       <Header />
-      <div className="mainPage">
-        <section className="topics-section">
-          <section className="top">
-            <button className="back" onClick={() => navigate('/')}>back</button>
-            <h2 className="profile">Quizzes</h2>
-          </section>
           <div className="topics-content">
-          <section className='quiz-section'>
-                <section className="editButtons">
-                  <button className="Edit" >Edit</button>
-                  <button className="Del" >Del</button>
-                </section>
-                <button className="topicbtn">
-                  Topic Name
+            {quizData.map((topic, index) => (
+              <section key={index}>
+                <button className="modify" onClick={() => handleClickModify(index)}>M</button>
+                <button className="delete" onClick={() => handleClickDelete(index)}>D</button>
+                <button className="topic-button" onClick={() => handleClickTopic(index)}>
+                  <img src={`path/to/${topic.name}.png`} alt={topic.name} />
                 </button>
               </section>
+            ))}
           </div>
-        </section>
-      </div>
       <Footer />
     </div>
   );
